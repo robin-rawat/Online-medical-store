@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Medicine : <b>{{queryset.sku_name}}</b></h3>
+{% endblock %}
+
+{% block detail %}
+<div class="center2">
+<ul>
+<li>SKU_ID : <b>{{queryset.sku_id}}</b></li>
+<li>PRODUCT_ID : <b>{{queryset.product_id}}</b></li>
+<li>NAME : <b>{{queryset.sku_name}}</b></li>
+<li>PRICE : <b>{{queryset.price}}</b></li>
+<li>MANUFACTURER : <b>{{queryset.manufacturer_name}}</b></li>
+<li>SALT_NAME : <b>{{queryset.salt_name}}</b></li>
+<li>DRUG_FORM : <b>{{queryset.drug_form}}</b></li>
+<li>PACK_SIZE : <b>{{queryset.pack_size}}</b></li>
+<li>IS_PRODUCT_BANNED : <b>{{queryset.product_banned}}</b></li>
+<li>UNIT : <b>{{queryset.unit}}</b></li>
+<li>PRICE_PER_UNIT : <b>{{queryset.price_per_unit}}</b></li>
+</ul>
+</div>
+{% endblock %}

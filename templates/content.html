@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if queryset %}
+<h3>Below are some medicines found based on your query</h3>
+{% for obj in queryset %}
+<table>
+    <tr><a href="{{obj.get_absolute_url}}">{{obj.sku_name}}</a></tr>
+</table>
+{% endfor %}
+{% else %}
+<h4>No medicine found in query</h4>
+{% endif %}
+{% endblock %}
